@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1312.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RaceController">
+   <top>
+      <Pane prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: tomato;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="23.0" prefHeight="64.0" prefWidth="1274.0" text="BASIC ALGORITHMS RACE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="43.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: snow; -fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="30.0" layoutY="29.0" text="N:">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNumber" layoutX="83.0" layoutY="42.0" prefHeight="30.0" prefWidth="291.0" />
+            <Label layoutX="896.0" layoutY="14.0" text="Timekeeper">
+               <font>
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <Pane layoutX="814.0" layoutY="58.0" prefHeight="83.0" prefWidth="305.0" style="-fx-border-color: black; -fx-background-color: snow;">
+               <children>
+                  <Label fx:id="labelTime" layoutX="42.0" layoutY="18.0">
+                     <font>
+                        <Font name="System Bold Italic" size="32.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="circleOne" fill="GREY" layoutX="254.0" layoutY="42.0" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circleTwo" fill="WHITE" layoutX="254.0" layoutY="42.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Separator layoutX="385.0" layoutY="1.0" orientation="VERTICAL" prefHeight="422.0" prefWidth="9.0" />
+            <Label layoutX="889.0" layoutY="156.0" text="Final Results">
+               <font>
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="92.0" fitWidth="146.0" layoutX="772.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/array.png" />
+               </image></ImageView>
+            <ImageView fitHeight="94.0" fitWidth="147.0" layoutX="920.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/linked.png" />
+               </image></ImageView>
+            <ImageView fitHeight="96.0" fitWidth="144.0" layoutX="1077.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/abb.png" />
+               </image></ImageView>
+            <Label layoutX="801.0" layoutY="310.0" text="ArrayList">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="947.0" layoutY="310.0" text="LinkedList">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1126.0" layoutY="310.0" text="ABB">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="timeArrayList" editable="false" layoutX="776.0" layoutY="342.0" prefHeight="25.0" prefWidth="129.0" />
+            <TextField fx:id="timeLinkedList" editable="false" layoutX="927.0" layoutY="342.0" prefHeight="25.0" prefWidth="129.0" />
+            <TextField fx:id="timeABB" editable="false" layoutX="1081.0" layoutY="342.0" prefHeight="25.0" prefWidth="136.0" />
+            <Label layoutX="30.0" layoutY="118.0" text="Algorithm:">
+               <font>
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <Separator layoutY="92.0" prefHeight="9.0" prefWidth="390.0" />
+            <Pane layoutX="25.0" layoutY="163.0" prefHeight="134.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: snow;">
+               <children>
+                  <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Add">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="algo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="14.0" layoutY="53.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Search" toggleGroup="$algo">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton layoutX="14.0" layoutY="92.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Delete" toggleGroup="$algo">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </Pane>
+            <Label layoutX="213.0" layoutY="118.0" text="Mode:">
+               <font>
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <Pane layoutX="207.0" layoutY="163.0" prefHeight="134.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: snow;">
+               <children>
+                  <RadioButton layoutX="17.0" layoutY="34.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="121.0" text="Iterative">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="mode" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="17.0" layoutY="73.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="121.0" text="Recursive" toggleGroup="$mode">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </Pane>
+            <Button layoutX="95.0" layoutY="333.0" mnemonicParsing="false" onAction="#run" prefHeight="37.0" prefWidth="200.0" text="RUN!" />
+            <Separator layoutX="757.0" layoutY="2.0" orientation="VERTICAL" prefHeight="422.0" prefWidth="9.0" />
+            <Label layoutX="499.0" layoutY="28.0" text="LIVE RACE:">
+               <font>
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="456.0" layoutY="112.0" text="ArrayList:">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="456.0" layoutY="216.0" text="LinkedList:">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="457.0" layoutY="323.0" text="ABB:">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="countArray" editable="false" layoutX="566.0" layoutY="113.0" prefHeight="25.0" prefWidth="103.0" />
+            <TextField fx:id="countLinked" editable="false" layoutX="571.0" layoutY="217.0" prefHeight="25.0" prefWidth="103.0" />
+            <TextField fx:id="countABB" editable="false" layoutX="572.0" layoutY="324.0" prefHeight="25.0" prefWidth="103.0" />
+            <ProgressBar fx:id="pbArray" layoutX="456.0" layoutY="160.0" prefHeight="20.0" prefWidth="214.0" progress="0.0" />
+            <ProgressBar fx:id="pbLinked" layoutX="459.0" layoutY="269.0" prefHeight="20.0" prefWidth="214.0" progress="0.0" />
+            <ProgressBar fx:id="pbABB" layoutX="459.0" layoutY="371.0" prefHeight="20.0" prefWidth="214.0" progress="0.0" />
+            <Button layoutX="780.0" layoutY="391.0" mnemonicParsing="false" onAction="#restart" prefHeight="34.0" prefWidth="440.0" text="Restart" />
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="31.0" prefWidth="1312.0" style="-fx-background-color: tomato;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Pane prefHeight="367.0" prefWidth="40.0" style="-fx-background-color: tomato;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="367.0" prefWidth="37.0" style="-fx-background-color: tomato;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
